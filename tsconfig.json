@@ -1,19 +1,28 @@
+
 {
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     },
-    "target": "es2018", // or the version aligned with your Node.js version
-    "module": "commonjs", // for compatibility with Node.js module system
-    "outDir": "./dist", // specify where to output the compiled JS files
+    "target": "es2018",
+      "module": "commonjs",
+    "outDir": "./dist",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
-    "noEmit": false // important for generating JS files
+    
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
   "include": ["src"]
 }
