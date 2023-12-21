@@ -6,13 +6,13 @@ import { ContactDto } from './dto/contact.dto';
 export class ContactController {
   constructor(private readonly contactService: ContactService) {}
 
- // @Post()
-//  create(@Body() data: ContactDto) {
-   // return this.contactService.create(data);
-   @Post('submit')
+  // @Post()
+  //  create(@Body() data: ContactDto) {
+  // return this.contactService.create(data);
+  @Post('submit')
   async submit(@Body() createContactDto: ContactDto) {
+    console.log('gooods');
     await this.contactService.submitForm(createContactDto);
+    return 'sucess';
   }
-  
-  }
-
+}

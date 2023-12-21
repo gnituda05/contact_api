@@ -51,7 +51,7 @@ export class ContactService {
       text: 'Thank you for submitting the contact form.',
       // You can also use html: to send HTML emails
     };
-
+    console.log('gooods');
     await transporter.sendMail(mailOptions);
   }
 }
