@@ -12,7 +12,7 @@ model Message {
   id        Int      @id @default(autoincrement())
   name      String
   mobile_num String
-  email     String
+  email     email
   company   String
   message   String
   createdAt DateTime @default(now())
