@@ -11,8 +11,8 @@ datasource db {
 model Message {
   id        Int      @id @default(autoincrement())
   name      String
-  mobile_num String
   email     String @unique
+  services String
   company   String
   message   String
   createdAt DateTime @default(now())

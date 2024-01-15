@@ -8,6 +8,9 @@ export class MailerDto {
   @IsEmail()
   email: string;
 
+  @IsString()
+  services: string;
+
   @IsOptional()
   @IsString()
   company?: string;
@@ -15,8 +18,4 @@ export class MailerDto {
   @IsOptional()
   @IsString()
   message?: string;
-
-  @IsOptional()
-  @IsString()
-  mobile?: string;
 }
